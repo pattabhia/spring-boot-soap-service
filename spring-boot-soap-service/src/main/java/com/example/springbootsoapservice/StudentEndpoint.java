@@ -11,7 +11,7 @@ import com.schoolmodel.xml.school.StudentDetailsResponse;
 
 @Endpoint
 public class StudentEndpoint {
-	private static final String NAMESPACE_URI = "http://localhost:8080/xml/school";
+	private static final String NAMESPACE_URI = "http://www.schoolmodel.com/xml/school";
 
 	private StudentRepository StudentRepository;
 

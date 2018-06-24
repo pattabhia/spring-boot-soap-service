@@ -1,4 +1,4 @@
-package com.example.howtodoinjava.springbootsoapservice;
+package com.example.springbootsoapservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
