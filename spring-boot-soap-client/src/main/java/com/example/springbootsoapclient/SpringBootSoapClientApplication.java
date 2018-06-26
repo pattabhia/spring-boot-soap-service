@@ -4,6 +4,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+
+import com.example.schemas.school.StudentDetailsRequest;
+import com.example.schemas.school.StudentDetailsResponse;
  
 @SpringBootApplication
 public class SpringBootSoapClientApplication {
@@ -19,13 +22,13 @@ public class SpringBootSoapClientApplication {
 			if(args.length>0){
 				name = args[0];
 			}
-			//StudentDetailsRequest request = new StudentDetailsRequest();
-			//request.setName(name);
-			//StudentDetailsResponse response =(StudentDetailsResponse) soapConnector.callWebService("http://localhost:8080/service/student-details", request);
-			//System.out.println("Got Response As below ========= : ");
-			//System.out.println("Name : "+response.getStudent().getName());
-			//System.out.println("Standard : "+response.getStudent().getStandard());
-			//System.out.println("Address : "+response.getStudent().getAddress());
+			StudentDetailsRequest request = new StudentDetailsRequest();
+			request.setName(name);
+			StudentDetailsResponse response =(StudentDetailsResponse) soapConnector.callWebService("http://localhost:8080/service/student-details", request);
+			System.out.println("Got Response As below ========= : ");
+			System.out.println("Name : "+response.getStudent().getName());
+			System.out.println("Standard : "+response.getStudent().getStandard());
+			System.out.println("Address : "+response.getStudent().getAddress());
 		};
 	}
 }
