@@ -29,6 +29,9 @@ public class SpringBootSoapClientApplication {
 			System.out.println("Name : "+response.getStudent().getName());
 			System.out.println("Standard : "+response.getStudent().getStandard());
 			System.out.println("Address : "+response.getStudent().getAddress());
+			
+			
+			
 		};
 	}
 }
